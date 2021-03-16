@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Board from './pages/Board/Board';
-import Main from './pages/Board/Main';
+import Main from './pages/Main/Main';
 
 const App: React.FC = () => (
   <BrowserRouter>

@@ -1,36 +1,59 @@
-import React, { ReactElement } from 'react';
+import React, { useState, useEffect } from 'react';
+import { IBoardPage } from '../../interfaces/board-page-interface';
+import './board.css';
 
-export default class Board extends React.PureComponent {
-  render(): ReactElement {
+const Board: React.FC = () => {
+  const [list, setTodos] = useState<IBoardPage>();
+  useEffect(() => {
+    const saved = {
+      title: 'My test board',
+      lists: [
+        {
+          id: 1,
+          title: 'Планы',
+          cards: [
+            { id: 1, title: 'помыть кота' },
+            { id: 2, title: 'приготовить суп' },
+            { id: 3, title: 'сходить в магазин' },
+          ],
+        },
+        {
+          id: 2,
+          title: 'В процессе',
+          cards: [{ id: 4, title: 'посмотреть сериал' }],
+        },
+        {
+          id: 3,
+          title: 'Сделано',
+          cards: [
+            { id: 5, title: 'сделать домашку' },
+            { id: 6, title: 'погулять с собакой' },
+          ],
+        },
+      ],
+    };
+    setTodos(saved);
+  }, []);
+
+  const items = list?.lists.map((item) => {
+    const elements = item.cards.map((cItem) => <li className="card board-list-item">{cItem.title}</li>);
     return (
-      <>
-        <h1>My board</h1>
-        <div className="cards">
-          <div className="card">
-            <h4>First desc</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis a voluptas in eveniet explicabo adipisci
-              dolor sequi ipsam at, assumenda reiciendis laboriosam quas qui sit magni hic deserunt ea natus!
-            </p>
-          </div>
-          <div className="card">
-            <h4>Second desc</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis a voluptas in eveniet explicabo adipisci
-              dolor sequi ipsam at, assumenda reiciendis laboriosam quas qui sit magni hic deserunt ea natus! Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Nobis a voluptas in eveniet explicabo adipisci dolor
-              sequi ipsam at, assumenda reiciendis laboriosam quas qui sit magni hic deserunt ea natus!
-            </p>
-          </div>
-          <div className="card">
-            <h4>Third desc</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis a voluptas in eveniet explicabo adipisci
-              dolor sequi ipsam at, assumenda reiciendis laboriosam quas qui sit magni hic deserunt ea natus!
-            </p>
-          </div>
-        </div>
-      </>
+      <div className="card board">
+        <h4>{item.title}</h4>
+        <ul className="board-list">{elements}</ul>
+      </div>
     );
-  }
-}
+  });
+
+  return (
+    <>
+      <div className="board-header">
+        <h1>{list?.title}</h1>
+        <button className="btn btn-add-board">Add board</button>
+      </div>
+      <div className="cards">{items}</div>
+    </>
+  );
+};
+
+export default Board;
