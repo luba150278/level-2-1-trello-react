@@ -13,6 +13,9 @@
   }
 }
 
+nav{
+  background-color: #00887a;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,6 +29,29 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.cards{
+  display: flex;
+  column-count: 3;
+  width: 100%;
+  justify-content: space-between;  
+  align-items: flex-start;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;  
+  align-items: flex-start;
+  padding: 10px;
+  margin-right: 40px;
+  width: 33%;
+  height: 400px;
+}
+
+.card:last-child{
+  margin-right: 0;
 }
 
 @keyframes App-logo-spin {
