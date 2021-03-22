@@ -8,10 +8,10 @@ const Navbar: React.FunctionComponent = () => (
         Trello project
       </NavLink>
       <ul className="right hide-on-med-and-down">
-        <li>
+        <li key="1">
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
+        <li key="2">
           <NavLink to="/board">Board</NavLink>
         </li>
       </ul>

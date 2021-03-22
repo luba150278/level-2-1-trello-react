@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Board from './pages/Board/Board';
@@ -12,6 +12,7 @@ const App: React.FC = () => (
       <Switch>
         <Route component={Main} path="/" exact />
         <Route component={Board} path="/board" exact />
+        <Redirect exact to="/" />
       </Switch>
     </div>
   </BrowserRouter>

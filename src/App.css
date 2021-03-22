@@ -22,11 +22,12 @@
   color: #61dafb;
 }
 
-h1{
+h1 {
   font-size: 3rem;
   color: #00887a;
   font-weight: 500;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

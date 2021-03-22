@@ -36,9 +36,13 @@ const Board: React.FC = () => {
   }, []);
 
   const items = list?.lists.map((item) => {
-    const elements = item.cards.map((cItem) => <li className="card board-list-item">{cItem.title}</li>);
+    const elements = item.cards.map((cItem) => (
+      <li key={cItem.id} className="card board-list-item">
+        {cItem.title}
+      </li>
+    ));
     return (
-      <div className="card board">
+      <div className="card board" key={item.id}>
         <h4>{item.title}</h4>
         <ul className="board-list">{elements}</ul>
       </div>
