@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/level-2-1-trello-react/static/css/main.228b3f55.chunk.css",
-    "main.js": "/level-2-1-trello-react/static/js/main.67cb39cd.chunk.js",
-    "main.js.map": "/level-2-1-trello-react/static/js/main.67cb39cd.chunk.js.map",
-    "runtime-main.js": "/level-2-1-trello-react/static/js/runtime-main.72c2adbe.js",
-    "runtime-main.js.map": "/level-2-1-trello-react/static/js/runtime-main.72c2adbe.js.map",
-    "static/js/2.4da79aa5.chunk.js": "/level-2-1-trello-react/static/js/2.4da79aa5.chunk.js",
-    "static/js/2.4da79aa5.chunk.js.map": "/level-2-1-trello-react/static/js/2.4da79aa5.chunk.js.map",
-    "static/js/3.25125655.chunk.js": "/level-2-1-trello-react/static/js/3.25125655.chunk.js",
-    "static/js/3.25125655.chunk.js.map": "/level-2-1-trello-react/static/js/3.25125655.chunk.js.map",
+    "main.css": "/level-2-1-trello-react/static/css/main.c3495bc0.chunk.css",
+    "main.js": "/level-2-1-trello-react/static/js/main.c05f7aeb.chunk.js",
+    "main.js.map": "/level-2-1-trello-react/static/js/main.c05f7aeb.chunk.js.map",
+    "runtime-main.js": "/level-2-1-trello-react/static/js/runtime-main.d7801bfc.js",
+    "runtime-main.js.map": "/level-2-1-trello-react/static/js/runtime-main.d7801bfc.js.map",
+    "static/js/2.2c02efc9.chunk.js": "/level-2-1-trello-react/static/js/2.2c02efc9.chunk.js",
+    "static/js/2.2c02efc9.chunk.js.map": "/level-2-1-trello-react/static/js/2.2c02efc9.chunk.js.map",
+    "static/js/3.48c71756.chunk.js": "/level-2-1-trello-react/static/js/3.48c71756.chunk.js",
+    "static/js/3.48c71756.chunk.js.map": "/level-2-1-trello-react/static/js/3.48c71756.chunk.js.map",
     "index.html": "/level-2-1-trello-react/index.html",
-    "static/css/main.228b3f55.chunk.css.map": "/level-2-1-trello-react/static/css/main.228b3f55.chunk.css.map",
-    "static/js/2.4da79aa5.chunk.js.LICENSE.txt": "/level-2-1-trello-react/static/js/2.4da79aa5.chunk.js.LICENSE.txt"
+    "static/css/main.c3495bc0.chunk.css.map": "/level-2-1-trello-react/static/css/main.c3495bc0.chunk.css.map",
+    "static/js/2.2c02efc9.chunk.js.LICENSE.txt": "/level-2-1-trello-react/static/js/2.2c02efc9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.72c2adbe.js",
-    "static/js/2.4da79aa5.chunk.js",
-    "static/css/main.228b3f55.chunk.css",
-    "static/js/main.67cb39cd.chunk.js"
+    "static/js/runtime-main.d7801bfc.js",
+    "static/js/2.2c02efc9.chunk.js",
+    "static/css/main.c3495bc0.chunk.css",
+    "static/js/main.c05f7aeb.chunk.js"
   ]
 }
