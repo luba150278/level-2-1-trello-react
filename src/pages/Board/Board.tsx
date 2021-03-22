@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { IBoardPage } from '../../interfaces/board-page-interface';
 import './board.css';
 
-const Board: React.FC = () => {
+type TParams = { id: string };
+
+function Board({ match }: RouteComponentProps<TParams>): JSX.Element {
   const [list, setTodos] = useState<IBoardPage>();
   useEffect(() => {
     const saved = {
@@ -52,12 +55,14 @@ const Board: React.FC = () => {
   return (
     <>
       <div className="board-header">
-        <h1>{list?.title}</h1>
-        <button className="btn btn-add-board">Add board</button>
+        <h1>
+          {list?.title}: {match.params.id}
+        </h1>
+        <button className="btn btn-add-board">Add List</button>
       </div>
       <div className="cards">{items}</div>
     </>
   );
-};
+}
 
 export default Board;

@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
   justify-content: space-between;
   width: 100%;
 }
@@ -33,6 +32,8 @@
   padding: 0;
 }
 
-.boardAdd {
+.btn-add-board {
+  background: #bb2a81;
   max-width: 200px;
+  margin-bottom: 40px;
 }

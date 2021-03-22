@@ -1,28 +1,32 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { IBoard } from '../../../../interfaces/board';
 import './board.css';
 
 type BoardsList = {
   list: IBoard[];
-  onRemove: (id: number) => void;
 };
 
-const Board: React.FC<BoardsList> = ({ list, onRemove }) => {
-  const removeHandler = (event: React.MouseEvent, id: number): void => {
-    event.preventDefault();
-    onRemove(id);
-  };
+const Board: React.FC<BoardsList> = ({ list }) => {
+  const history = useHistory();
 
-  const items = list.map((item: IBoard) => (
-    <div className="board-title card" key={item.id} onClick={(event): void => removeHandler(event, item.id)}>
-      {item.borardTitle}
-    </div>
-  ));
+  const items = list.map((item: IBoard) => {
+    const linkId = `/board/${item.id}`;
+    return (
+      <Link to={linkId}>
+        <div className="board-title card" key={item.id}>
+          {item.borardTitle}
+        </div>
+      </Link>
+    );
+  });
 
   return (
     <div className="contentPage">
+      <button className="btn  btn-add-board" onClick={(): void => history.push('/board')}>
+        Add Board
+      </button>
       <div className="board">{items}</div>
-      <button className="btn boardAdd">Add Board</button>
     </div>
   );
 };
