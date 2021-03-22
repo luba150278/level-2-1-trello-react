@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+/* import { useHistory } from 'react-router-dom'; */
 import { IBoard } from '../../interfaces/board';
 import Board from './components/Board/Board';
 
+declare let confirm: (question: string) => boolean;
 const Main: React.FC = () => {
-  const history = useHistory();
+  /*   const history = useHistory(); */
   const [list, setTodos] = useState<IBoard[]>([]);
   useEffect(() => {
     const boards = [
@@ -15,14 +16,20 @@ const Main: React.FC = () => {
     ];
     setTodos(boards);
   }, []);
+  const removeHandler = (id: number): void => {
+    const shoudRemove = confirm('Are you sure to delete the to-do item?');
+    if (shoudRemove) {
+      setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    }
+  };
   return (
     <>
       <h1>My Boards</h1>
       <p>This is a training React-project. An analogue of the "Trello" service.</p>
-      <Board list={list} />
-      <button className="btn" onClick={(): void => history.push('/board')}>
+      <Board list={list} onRemove={removeHandler} />
+      {/*       <button className="btn" onClick={(): void => history.push('/board')}>
         Go to the 'Board' page
-      </button>
+      </button> */}
     </>
   );
 };
