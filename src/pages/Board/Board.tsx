@@ -4,7 +4,11 @@ import { IBoardPage } from '../../interfaces/board-page-interface';
 import './board.css';
 
 type TParams = { id: string };
-
+/**
+ *
+ * @param param0 board id
+ * @returns trello board
+ */
 function Board({ match }: RouteComponentProps<TParams>): JSX.Element {
   const [list, setTodos] = useState<IBoardPage>();
   useEffect(() => {

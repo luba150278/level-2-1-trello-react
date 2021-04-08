@@ -4,12 +4,16 @@ import './App.css';
 import Board from './pages/Board/Board';
 import Home from './pages/Home/Home';
 
+/**
+ *
+ * @returns routes
+ */
 const App: React.FC = () => (
   <BrowserRouter>
     <div className="container">
       <Switch>
         <Route component={Home} path="/" exact />
-        <Route component={Board} path="/board/:id" exact />
+        <Route component={Board} path="/board/:id" />
         <Redirect exact to="/" />
       </Switch>
     </div>
