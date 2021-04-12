@@ -8,10 +8,10 @@ const Main: React.FC = () => {
   const [list, setTodos] = useState<IBoard[]>([]);
   useEffect(() => {
     const boards = [
-      { id: 1, borardTitle: 'покупки' },
-      { id: 2, borardTitle: 'поподготовка к свадьбе' },
-      { id: 3, borardTitle: 'курс по продвижению' },
-      { id: 4, borardTitle: 'празработка магазина' },
+      { id: 1, title: 'покупки' },
+      { id: 2, title: 'подготовка к свадьбе' },
+      { id: 3, title: 'курс по продвижению' },
+      { id: 4, title: 'разработка магазина' },
     ];
     setTodos(boards);
   }, []);

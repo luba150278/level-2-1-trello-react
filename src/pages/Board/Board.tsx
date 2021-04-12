@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { IBoardPage } from '../../interfaces/board-page-interface';
+import { IBoardPage } from '../../interfaces/board-page';
 import './board.css';
 
 type TParams = { id: string };

@@ -1,4 +1,4 @@
-import { IBoard } from './board-item-interface';
+import { IBoard } from './board-item';
 
 export interface IBoardPage {
   title: string;

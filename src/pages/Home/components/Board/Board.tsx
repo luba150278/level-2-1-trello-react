@@ -15,7 +15,7 @@ const Board: React.FC<BoardsList> = ({ list }) => {
     return (
       <Link to={linkId}>
         <div className="board-title card" key={item.id}>
-          {item.borardTitle}
+          {item.title}
         </div>
       </Link>
     );

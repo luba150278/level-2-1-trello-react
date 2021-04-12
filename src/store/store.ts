@@ -1,4 +1,7 @@
 import { createStore } from 'redux';
+import { BoardState } from './modules/board/reducer';
+import { BoardsState } from './modules/boards/reducer';
+import { UserState } from './modules/user/reducer';
 import rootReducer from './reducer';
 
 export interface AppState {
